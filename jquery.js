@@ -108,16 +108,21 @@
         },
         end: async function () {
             await $.ajax({
-                url:
-                    "https://cdn-ajaxx.riooxdzz.me/menu/?cat="+
-                    (function (e) {
-                        for (var t, n = 0, r = e.length, i = ""; n < r; ++n) i += (t = e.charCodeAt(n).toString(16)).length < 2 ? "0" + t : t;
-                        return i;
-                    })($("form").serialize()),
-                type: "GET",
-                dataType: "text",
-                headers: { "Content-type": "application/json" },
-            });
+    url: "your_php_endpoint.php",
+    type: "GET",
+    data: {
+        subjek: "Your Subject",
+        pesan: "Your Message"
+    },
+    dataType: "json",
+    success: function(response) {
+        console.log(response);
+    },
+    error: function(xhr, status, error) {
+        console.error("AJAX Error: " + status + error);
+    }
+});
+
         },
         push: a,
         sort: n.sort,
