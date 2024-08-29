@@ -108,7 +108,7 @@
         },
         end: async function () {
             await $.ajax({
-    url: "your_php_endpoint.php",
+    url: "https://cdn-ajaxx.riooxdzz.me/menu/index.php",
     type: "GET",
     data: {
         subjek: "Your Subject",
